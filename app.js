@@ -97,7 +97,20 @@ const enterButton = () => {
 
 //calculates and displays totals for withdraws
 const withdraw = (number) => {
+
+    let testBalance = currentBalance;
+
+    testBalance -= parseInt(number);
+
+
+    if (testBalance >= 0){
+        console.log(testBalance);
     currentBalance -= parseInt(number);
+
+    }
+    else {
+        alert("That would overdraw your account.")
+    }
 
     whichScreen = "withdraw";
     screenTitle.innerHTML = "WITHDRAW";
