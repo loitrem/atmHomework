@@ -1,0 +1,350 @@
+body{
+    background-color: gray;
+}
+
+.mainContainert{
+    width: 100%;
+}
+
+.mainDisplayWrapper{
+
+    height: 525px;
+    width: 1200px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px black, inset 0 0 15px rgb(0, 0, 0);
+}
+
+.buttonsLeftWrapper{
+    width: 10%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+}
+
+.screenWrapper{
+    width: 80%;
+    height: 485px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 0 10px black, inset 0px 0px 5px rgb(0, 0, 0);
+    background-color: rgb(31, 31, 31);
+    color: green;
+    font-size: 25px;
+    font-family:Arial, Helvetica, sans-serif;
+    display: flex;
+}
+
+.screenLeft{
+    width: 15%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.leftMenu{
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    height: 50px;
+    width: 90%;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.screenMiddle{
+    width: 70%;
+    display: flex;
+    padding: 35px;
+}
+
+.innerMiddleScreen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 90%;   
+}
+
+.atmTitle{
+    font-size: 45px;
+    margin-bottom: 35px;
+}
+
+.atmText {
+    text-align: center;
+}
+
+.atmInputScreen {
+    margin: 20px;
+    height: 25px;
+}
+
+.screenRight{
+    width: 15%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.rightMenu{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    height: 50px;
+    width: 90%;
+    align-self: flex-end;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.buttonsRightWrapper{
+    width: 10%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+}
+
+.calcWrapper{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 25px;
+    background-color: gray;
+    box-shadow: inset 0 0 20px black;
+}
+
+.buttonContainer{
+display: flex;
+justify-content: center;
+padding:2px;
+
+}
+
+.screenBtnLeft{
+    height: 50px;
+    width: 90%;
+    background-color: gray;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0 10px black, inset 0px 0px 5px rgb(0, 0, 0);
+    font-size: 36px;
+    color: rgb(95, 95, 95);
+    text-align: right;
+}
+
+.screenBtnLeft:hover {
+    height: 50px;
+    width: 90%;
+    background-color: rgb(64, 64, 64);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0 10px black, inset 0px 0px 5px rgb(0, 0, 0);
+    font-size: 36px;
+    color: rgb(95, 95, 95);
+    text-align: right;
+}
+
+.screenBtnRight{
+    height: 50px;
+    width: 90%;
+    background-color: gray;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0 10px black, inset 0px 0px 5px rgb(0, 0, 0);
+    font-size: 36px;
+    color: rgb(95, 95, 95);
+    text-align: left;
+}
+
+.screenBtnRight:hover {
+    height: 50px;
+    width: 90%;
+    background-color: rgb(64, 64, 64);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0 10px black, inset 0px 0px 5px rgb(0, 0, 0);
+    font-size: 36px;
+    color: rgb(95, 95, 95);
+    text-align: left;
+}
+
+.calcTop{
+    height: 75px;
+}
+
+.calcBottom{
+    height: 300px;
+    display: flex;
+}
+
+.leftColumn{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.leftMiddleColumn{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.rightMiddleColumn{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.rightColumn{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.btnCell {
+    height: 25%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    width: 90%;
+    height: 90%;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: 2px solid black;
+    border-radius: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgb(24, 24, 24);
+    color: whitesmoke;
+    box-shadow: 0 0 10px black, inset 0 0 5px rgb(144, 144, 144);
+}
+
+.btn:hover {
+    width: 90%;
+    height: 90%;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: 2px solid black;
+    border-radius: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgb(51, 51, 51);
+    color: whitesmoke;
+    box-shadow: inset 0 0 5px rgb(144, 144, 144);
+}
+
+.btnCancel {
+    width: 90%;
+    height: 90%;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: 2px solid black;
+    border-radius: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgb(121, 14, 14);
+    color: black;
+    box-shadow: 0 0 10px black, inset 0 0 5px rgb(0, 0, 0);
+}
+
+.btnCancel:hover {
+    width: 90%;
+    height: 90%;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: 2px solid black;
+    border-radius: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgb(81, 18, 18);
+    color: black;
+    box-shadow: 0 0 10px black, inset 0 0 5px rgb(0, 0, 0);
+}
+
+
+
+.btnClear {
+    width: 90%;
+    height: 90%;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: 2px solid black;
+    border-radius: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgb(165, 165, 7);
+    color: black;
+    box-shadow: 0 0 10px black, inset 0 0 5px rgb(0, 0, 0);
+}
+
+.btnClear:hover {
+    width: 90%;
+    height: 90%;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: 2px solid black;
+    border-radius: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgb(105, 118, 11);
+    color: black;
+    box-shadow: 0 0 10px black, inset 0 0 5px rgb(0, 0, 0);
+}
+
+.btnEnter {
+    width: 90%;
+    height: 90%;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: 2px solid black;
+    border-radius: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgb(1, 112, 8);
+    color: black;
+    box-shadow: 0 0 10px black, inset 0 0 5px rgb(0, 0, 0);
+}
+
+.btnEnter:hover {
+    width: 90%;
+    height: 90%;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: 2px solid black;
+    border-radius: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgb(2, 94, 14);
+   color: black;
+    box-shadow: 0 0 10px black, inset 0 0 5px rgb(0, 0, 0);
+}

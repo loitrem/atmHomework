@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- main container -->
+        <div class="mainContainer">
+
+            <!-- main display wrapper -->
+            <div class="mainDisplayWrapper">
+
+                <!-- buttons left wrapper -->
+                <div class="buttonsLeftWrapper">
+
+                    <!-- button container -->
+                    <div class="buttonContainer">
+                        <button class="screenBtnLeft"onclick="homeScreen()">></button>
+                    </div>
+
+                    <!-- button container -->
+                    <div class="buttonContainer">
+                        <button class="screenBtnLeft" onclick="balanceScreen()">></button>
+                    </div>
+
+                    <!-- button container -->
+                    <div class="buttonContainer">
+                        <button class="screenBtnLeft">></button>
+                    </div>
+
+                    <!-- button container -->
+                    <div class="buttonContainer">
+                        <button class="screenBtnLeft">></button>
+                    </div>
+
+                <!-- end button left wrapper -->
+                </div>
+
+                <!-- screen wrapper -->
+                <div class="screenWrapper">
+
+                    <!-- screen left -->
+                    <div class="screenLeft">
+
+                        <!-- left menu -->
+                        <div class="leftMenu">
+                            ----- Home
+                        </div>
+
+                        <div class="leftMenu">
+                            ----- Balance
+                        </div>
+
+                        <div class="leftMenu">
+                            -----
+                        </div>
+
+                        <div class="leftMenu">
+                            -----
+                        </div>
+                        
+                    <!-- end left menu -->
+                    </div>
+
+                    <!-- screen middle -->
+                    <div class="screenMiddle">
+
+                        <!-- inner middle screen -->
+                        <div class="innerMiddleScreen">
+                            
+                            <div class="atmTitle">
+                                BANK OF PER SCHOLAS
+                            </div>
+                            <div class="atmText">
+                                Please select a menu item
+                            </div>
+                            <div class="atmInputScreen">
+                            
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <!-- screen right -->
+                    <div class="screenRight">
+
+                        <!-- right menu -->
+                        <div class="rightMenu">
+                            Withdraw -----
+                        </div>
+
+                        <div class="rightMenu">
+                            Deposit -----
+                        </div>
+
+                        <div class="rightMenu">
+                            -----
+                        </div>
+
+                        <div class="rightMenu">
+                            -----
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- buttons right wrapper -->
+                <div class="buttonsRightWrapper">
+
+                    <!-- button container -->
+                    <div class="buttonContainer">
+                        <button class="screenBtnRight" onclick="withdrawScreenNew()"> < </button>
+                    </div>
+
+                    <!-- button container -->
+                    <div class="buttonContainer">
+                        <button class="screenBtnRight" onclick="depositScreenNew()"> < </button>
+                    </div>
+
+                    <!-- button container -->
+                    <div class="buttonContainer">
+                        <button class="screenBtnRight"> < </button>
+                    </div>
+
+                    <!-- button container -->
+                    <div class="buttonContainer">
+                        <button class="screenBtnRight"> < </button>
+                    </div>
+
+                <!-- end button right wrapper -->
+                </div>
+
+            <!-- end main display wrapper -->
+            </div>
+
+                <!-- calc wrapper -->
+                <div class="calcWrapper">
+
+                    <!-- calc bottom -->
+                    <div class="calcBottom">
+
+                        <!-- left column -->
+                        <div class="leftColumn">
+
+                            <!-- 7 -->
+                            <div class="btnCell">
+                                <button class="btn" onclick="uploadToScreen('7')">7</button>
+                            </div>
+
+                            <!-- 4 -->
+                            <div class="btnCell">
+                                <button class="btn" onclick="uploadToScreen('4')">4</button>
+                            </div>
+
+                            <!-- 1 -->
+                            <div class="btnCell">
+                                <button class="btn" onclick="uploadToScreen('1')">1</button>
+                            </div>
+
+                            <!-- 0 -->
+                            <div class="btnCell">
+                                <button class="btn" onclick="uploadToScreen('*')">*</button>
+                            </div>
+                        
+                        <!-- end left column -->
+                        </div>
+
+                        <!-- left middle column -->
+                        <div class="leftMiddleColumn">
+
+                            <!-- 8 -->
+                            <div class="btnCell">
+                                <button class="btn" onclick="uploadToScreen('8')">8</button>
+                            </div>
+
+                            <!-- 5 -->
+                            <div class="btnCell">
+                                <button class="btn" onclick="uploadToScreen('5')">5</button>
+                            </div>
+
+                            <!-- 2 -->
+                            <div class="btnCell">
+                                <button class="btn" onclick="uploadToScreen('2')">2</button>
+                            </div>
+
+                            <!-- period -->
+                            <div class="btnCell">
+                                <button class="btn" onclick="uploadToScreen('0')">0</button>
+                            </div>
+
+                        <!-- end left middle column -->
+                        </div>
+
+                        <!-- right middle column -->
+                        <div class="rightMiddleColumn">
+
+                            <!-- 9 -->
+                            <div class="btnCell">
+                                <button class="btn" onclick="uploadToScreen('9')">9</button>
+                            </div>
+
+                            <!-- 6 -->
+                            <div class="btnCell">
+                                <button class="btn" onclick="uploadToScreen('6')">6</button>
+                            </div>
+
+                            <!-- 3 -->
+                            <div class="btnCell">
+                                <button class="btn">3</button>
+                            </div>
+
+                            <!-- = -->
+                            <div class="btnCell">
+                                <button class="btn">#</button>
+                            </div>
+
+                        <!-- end right middle column -->
+                        </div>
+
+                        <!-- right column -->
+                        <div class="rightColumn">
+
+                            <!-- divide -->
+                            <div class="btnCell">
+                                <button class="btnCancel" onclick="homeScreen()">CANCEL</button>
+                            </div>
+
+                            <!-- multiply -->
+                            <div class="btnCell">
+                                <button class="btnClear" onclick="clearInputScreen()">CLEAR</button>
+                            </div>
+
+                            <!-- subtract -->
+                            <div class="btnCell">
+                                <button class="btnEnter" onclick="enterButton()">ENTER</button>
+                            </div>
+
+                            <!-- add -->
+                            <div class="btnCell">
+                                </div>
+
+                        <!-- end right column -->
+                        </div>
+
+                    <!-- end calc bottom -->
+                    </div>
+
+                <!-- end calc wrapper -->
+                </div>
+
+        <!-- end main container -->
+        </div>
+        
+        
+        <script src="app.js" async defer></script>
+    </body>
+</html>
