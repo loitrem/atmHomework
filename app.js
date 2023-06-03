@@ -81,16 +81,18 @@ const clearInputScreen = () => {
 //adds or subtracts from balance depending on which screen you are on
 const enterButton = () => {
 
-    //gets the input from the input screen
-    enteredAmount = screenInputScreen.innerHTML;
+    //gets the input from the input screen if not null
+    if (screenInputScreen.innerHTML!=""){
+        enteredAmount = screenInputScreen.innerHTML;
     
-    // checks which screen we are on using whichScreen variable
-    if (whichScreen==="withdraw"){
-        withdraw(enteredAmount); 
-     } 
-     else if (whichScreen==="deposit"){
-         deposit(enteredAmount); 
-      } 
+        // checks which screen we are on using whichScreen variable
+        if (whichScreen==="withdraw"){
+            withdraw(enteredAmount); 
+        } 
+        else if (whichScreen==="deposit"){
+            deposit(enteredAmount); 
+        }
+    }   
 }
 
 //calculates and displays totals for withdraws

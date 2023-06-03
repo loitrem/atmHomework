@@ -43,7 +43,7 @@ body{
 }
 
 .screenLeft{
-    width: 15%;
+    width: 18%;
     margin-top: 15px;
     margin-bottom: 15px;
     display: flex;
@@ -63,7 +63,7 @@ body{
 }
 
 .screenMiddle{
-    width: 70%;
+    width: 64%;
     display: flex;
     padding: 35px;
 }
@@ -78,7 +78,7 @@ body{
 }
 
 .atmTitle{
-    font-size: 45px;
+    font-size: 40px;
     margin-bottom: 35px;
 }
 
@@ -92,7 +92,7 @@ body{
 }
 
 .screenRight{
-    width: 15%;
+    width: 18%;
     margin-top: 15px;
     margin-bottom: 15px;
     display: flex;
