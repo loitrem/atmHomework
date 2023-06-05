@@ -125,7 +125,6 @@ body{
 .calcWrapper{
     width: 500px;
     margin-left: auto;
-    margin-right: auto;
     margin-top: 25px;
     padding: 15px;
     border-radius: 25px;
@@ -188,12 +187,14 @@ padding:2px;
     text-align: left;
 }
 
-.calcTop{
-    height: 75px;
+.bottomWrapper{
+    display: flex;
+    justify-content: center;
 }
 
 .calcBottom{
     height: 300px;
+    width: 400px;
     display: flex;
 }
 
@@ -347,4 +348,13 @@ padding:2px;
     background-color: rgb(2, 94, 14);
    color: black;
     box-shadow: 0 0 10px black, inset 0 0 5px rgb(0, 0, 0);
+}
+
+.atmCard{
+    height: 254px;
+    width: 383px;
+    display: flex;
+    justify-items: left;
+    margin-right: auto;
+    align-items: start;
 }

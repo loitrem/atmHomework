@@ -3,6 +3,7 @@
 let screenTitle = document.querySelector('.atmTitle');
 let screenText = document.querySelector('.atmText');
 let screenInputScreen = document.querySelector('.atmInputScreen');
+let atmCardDiv = document.querySelector('.atmCard');
 let whichScreen = "";
 let currentBalance = 1000;
 let enteredAmount;
@@ -126,5 +127,10 @@ const deposit = (number) => {
     screenTitle.innerHTML = "DEPOSIT";
     screenText.innerHTML = "Your current balance is: $" + currentBalance + "<p> How much would you like to deposit?</p>";
     screenInputScreen.innerHTML = "";
+}
+
+// atm card in or out
+const atmCard = () => {
+    atmCardDiv.innerHTML = "<img class='atmCardPic' src='atmcard2.png'></img>";
 }
 
