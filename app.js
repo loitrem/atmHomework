@@ -198,6 +198,12 @@ const finished = () => {
     screenTitle.innerHTML = "BANK OF PER SCHOLAS";
     screenText.innerHTML = "Please insert your card";
     screenInputScreen.innerHTML = ""; 
+    document.getElementById("home").innerHTML = "----->";
+    document.getElementById("balance").innerHTML = "----->";
+    document.getElementById("withdraw").innerHTML = "<-----";
+    document.getElementById("deposit").innerHTML = "<-----";
+    document.getElementById("finished").innerHTML = "<-----";
+    
     pinGood = false;
     }
 }
