@@ -7,6 +7,7 @@ let atmCardDiv = document.querySelector('.atmCard');
 let whichScreen = "";
 let currentBalance = 1000;
 let enteredAmount;
+let pinGood = false;
 
 // atm card in or out
 const atmCard = () => {
@@ -30,16 +31,15 @@ const pinScreen = (number) => {
 
 const pin = (num) => {
     if (num==="1234"){
-        homeScreen();
-
+        
         //set menu text
         document.getElementById("home").innerHTML = "-----> Home";
         document.getElementById("balance").innerHTML = "-----> Balance";
         document.getElementById("withdraw").innerHTML = "Withdraw <-----";
         document.getElementById("deposit").innerHTML = "Deposit <-----";
-        
-
-
+        document.getElementById("finished").innerHTML = "Finished <-----";
+        pinGood = true;
+        homeScreen();
 
     } else {
         screenInputScreen.innerHTML = "Invalid PIN";
@@ -48,48 +48,61 @@ const pin = (num) => {
 
 // homescreen
 const homeScreen = () => {
-    whichScreen = "home";
+    if (pinGood){
+       whichScreen = "home";
     screenTitle.innerHTML = "BANK OF PER SCHOLAS";
     screenText.innerHTML = "Please select a menu item";
-    screenInputScreen.innerHTML = "";
+    screenInputScreen.innerHTML = ""; 
+    }
+    
 }
 
 //balance screen
 const balanceScreen = () => {
+    if (pinGood){
     whichScreen = "balance";
     screenTitle.innerHTML = "BALANCE";
     screenText.innerHTML = "Your current balance is:";
     screenInputScreen.innerHTML = "$" + currentBalance;
+    }
 }
 
 //withdraw screen sets screen input to blank
 const withdrawScreenNew = () => {
+    if (pinGood){
     whichScreen = "withdraw";
     screenTitle.innerHTML = "WITHDRAW";
     screenText.innerHTML = "Your current balance is: $" + currentBalance + "<p> How much would you like to withdraw?</p>"; 
     screenInputScreen.innerHTML = ""; 
+    }
 }
 
 //withdraw screen. this function will show keypad input
 const withdrawScreen = (number) => {
+    if (pinGood){
     whichScreen = "withdraw";
     screenTitle.innerHTML = "WITHDRAW";
     screenText.innerHTML = "Your current balance is: $" + currentBalance + "<p> How much would you like to withdraw?</p>";  
+    }
 }
 
 //deposit screen sets screen input to blank
 const depositScreenNew = () => {
+    if (pinGood){
     whichScreen = "deposit";
     screenTitle.innerHTML = "DEPOSIT";
     screenText.innerHTML = "Your current balance is: $" + currentBalance + "<p> How much would you like to deposit?</p>";
     screenInputScreen.innerHTML = "";
+    }
 }
 
 //deposit screen. this function will show keypad input
 const depositScreen = (number) => {
+    if (pinGood){
     whichScreen = "deposit";
     screenTitle.innerHTML = "DEPOSIT";
     screenText.innerHTML = "Your current balance is: $" + currentBalance + "<p> How much would you like to deposit?</p>";
+    }
     
 }
 
@@ -177,4 +190,14 @@ const deposit = (number) => {
     screenInputScreen.innerHTML = "";
 }
 
-
+// finished
+const finished = () => {
+    if (pinGood){
+       whichScreen = "";
+       atmCardDiv.innerHTML = "<img class='atmCardPic' src='atmcard.png' onclick='atmCard()''></img>";
+    screenTitle.innerHTML = "BANK OF PER SCHOLAS";
+    screenText.innerHTML = "Please insert your card";
+    screenInputScreen.innerHTML = ""; 
+    pinGood = false;
+    }
+}
