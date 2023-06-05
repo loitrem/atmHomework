@@ -8,6 +8,44 @@ let whichScreen = "";
 let currentBalance = 1000;
 let enteredAmount;
 
+// atm card in or out
+const atmCard = () => {
+    atmCardDiv.innerHTML = "<img class='atmCardPic' src='atmcard2.png'></img>";
+    pinScreenNew();
+}
+
+//pin screen. this function will show keypad input
+const pinScreenNew = (number) => {
+    whichScreen = "pin";
+    screenText.innerHTML = "Please enter your PIN";
+    screenInputScreen.innerHTML = "HINT: 1234";
+      
+}
+
+const pinScreen = (number) => {
+    whichScreen = "pin";
+    screenText.innerHTML = "Please enter your PIN";
+      
+}
+
+const pin = (num) => {
+    if (num==="1234"){
+        homeScreen();
+
+        //set menu text
+        document.getElementById("home").innerHTML = "-----> Home";
+        document.getElementById("balance").innerHTML = "-----> Balance";
+        document.getElementById("withdraw").innerHTML = "Withdraw <-----";
+        document.getElementById("deposit").innerHTML = "Deposit <-----";
+        
+
+
+
+    } else {
+        screenInputScreen.innerHTML = "Invalid PIN";
+    }
+}
+
 // homescreen
 const homeScreen = () => {
     whichScreen = "home";
@@ -65,12 +103,19 @@ const uploadToScreen = (number) => {
     else if (whichScreen==="deposit"){
         depositScreen(number); 
      } 
+     else if (whichScreen==="pin"){
+        pinScreen(number); 
+        if (screenInputScreen.innerHTML === "HINT: 1234" || screenInputScreen.innerHTML==="Invalid PIN"){
+            clearInputScreen();
+        }
+     } 
     
      // checks to see if we are on only withdraw or deposit to be able to use keypad
-     if (whichScreen==="withdraw" || whichScreen==="deposit") {
+     if (whichScreen==="withdraw" || whichScreen==="deposit" || whichScreen==="pin") {
         
         //appends new number per button press
-        screenInputScreen.append(number);
+        screenInputScreen.append(number); 
+        
      }
 }
 
@@ -92,6 +137,9 @@ const enterButton = () => {
         } 
         else if (whichScreen==="deposit"){
             deposit(enteredAmount); 
+        }
+        else if (whichScreen==="pin"){
+            pin(enteredAmount); 
         }
     }   
 }
@@ -129,8 +177,4 @@ const deposit = (number) => {
     screenInputScreen.innerHTML = "";
 }
 
-// atm card in or out
-const atmCard = () => {
-    atmCardDiv.innerHTML = "<img class='atmCardPic' src='atmcard2.png'></img>";
-}
 

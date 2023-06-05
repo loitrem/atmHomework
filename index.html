@@ -49,12 +49,12 @@
                     <div class="screenLeft">
 
                         <!-- left menu -->
-                        <div class="leftMenu">
-                            -----> Home
+                        <div id="home" class="leftMenu">
+                            ----->
                         </div>
 
-                        <div class="leftMenu">
-                            -----> Balance
+                        <div id="balance" class="leftMenu">
+                            ----->
                         </div>
 
                         <div class="leftMenu">
@@ -78,7 +78,7 @@
                                 BANK OF PER SCHOLAS
                             </div>
                             <div class="atmText">
-                                Please select a menu item
+                                Please insert your card
                             </div>
                             <div class="atmInputScreen">
                             
@@ -91,12 +91,12 @@
                     <div class="screenRight">
 
                         <!-- right menu -->
-                        <div class="rightMenu">
-                            Withdraw <-----
+                        <div id="withdraw" class="rightMenu">
+                            <-----
                         </div>
 
-                        <div class="rightMenu">
-                            Deposit <-----
+                        <div id="deposit" class="rightMenu">
+                            <-----
                         </div>
 
                         <div class="rightMenu">
@@ -228,17 +228,17 @@
                         <!-- right column -->
                         <div class="rightColumn">
 
-                            <!-- divide -->
+                            <!-- home -->
                             <div class="btnCell">
                                 <button class="btnCancel" onclick="homeScreen()">CANCEL</button>
                             </div>
 
-                            <!-- multiply -->
+                            <!-- clear -->
                             <div class="btnCell">
                                 <button class="btnClear" onclick="clearInputScreen()">CLEAR</button>
                             </div>
 
-                            <!-- subtract -->
+                            <!-- enter -->
                             <div class="btnCell">
                                 <button class="btnEnter" onclick="enterButton()">ENTER</button>
                             </div>
@@ -257,8 +257,8 @@
                 </div>
 
                 <div class="atmCard">
-                    <a href="#" onclick="atmCard()">
-                    <img class="atmCardPic" src="atmcard.png"></img>
+                    <a href="#">
+                    <img class="atmCardPic" src="atmcard.png" onclick="atmCard()"></img>
                     </a>
                 </div>
 
